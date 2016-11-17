@@ -1,13 +1,14 @@
 html, body {
 	height: 100%;
 	width: 100%;
-	background-color: rgb(65, 65, 65);
 }
 
 body {
 	height: 100%;
-	display: flex;
-	flex-direction: column;
+	float: left;
+	background-color: rgb(250, 250, 250);
+	/*background-image: url("./images/background.jpg");
+	background-attachment: fixed;*/
 }
 
 /* Remove default link decorations. */
@@ -18,15 +19,16 @@ a:active {text-decoration: none;}
 
 /* Navbar */
 .navContainer {
-	position: fixed;
+	position: absolute;
 	display: flex;
 	flex-direction: row;
 	height: 8vh;
 	width: 100%;
-	background-color: rgb(40, 40, 40);
+	/*background-color: rgb(40, 40, 40);*/
+	background-color: transparent;
 	padding: 0;
 	margin: 0;
-	box-shadow: 0px 6px 3px -3px black;
+	/*box-shadow: 0px 6px 3px -3px black;*/
 	z-index: 3;
 }
 
@@ -50,13 +52,13 @@ a:active {text-decoration: none;}
 	margin-right: 10px;
 }
 
-.navItem:active {background-color: rgb(90, 90, 90);}
-.navItem:hover {background-color: rgb(90, 90, 90);}
-.navItem:focus {background-color: rgb(90, 90, 90); outline: none;}
+.navItem:active {border-color: blue; border-width: thin; border-style: solid;}
+.navItem:hover {border-color: blue; border-width: thin; border-style: solid;}
+.navItem:focus {border-color: blue; border-width: thin; border-style: solid; outline: none;}
 
 /* Text in each item on the right side of navbar */
 .navItem h3 {
-	color: rgb(188, 188, 188);
+	color: black;
 	font-size: 1.3em;
 	font-family: 'Titillium Web', sans-serif;
 }
@@ -70,7 +72,7 @@ a:active {text-decoration: none;}
 }
 
 .name h3 {
-	color: rgb(188, 188, 188);
+	color: black;
 	font-size: 1.3em;
 	font-family: 'Titillium Web', sans-serif;
 }
@@ -95,106 +97,161 @@ a:active {text-decoration: none;}
 	}
 }
 
-@keyframes flyInFromLeft {
+.topBlockContainer {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	padding-top: 8vh;
+}
+
+.aboutMe {
+	position: absolute;
+	bottom: 15vh;
+	right: 0;
+	height: 60%;
+	width: 75%;
+	animation-name: flyIn;
+	animation-duration: 1.5s;
+	animation-timing-function: ease-out;
+}
+
+@keyframes flyIn {
 	from {
-		margin-right: 900vh;
+		right: 400vh;
 	}
 	to {
-		margin-right: 3vh;
+		right: 0;
 	}
 }
 
-@keyframes float {
+.hello {
+	color: blue;
+	font-family: 'Titillium Web', sans-serif;
+
+}
+
+.welcome {
+	color: black;
+	font-family: 'Titillium Web', sans-serif;
+
+}
+
+.underWelcome {
+
+}
+
+@keyframes fadeIn {
 	from {
-	    -ms-transform: rotate(-3deg); /* IE 9 */
-	    -webkit-transform: rotate(-3deg); /* Chrome, Safari, Opera */
-	    transform: rotate(-3deg);
+		opacity: 0;
 	}
 	to {
-	    -ms-transform: rotate(3deg); /* IE 9 */
-	    -webkit-transform: rotate(3deg); /* Chrome, Safari, Opera */
-	    transform: rotate(3deg);
+		opacity: 1;
 	}
 }
 
-/* Body under navbar. */
+/* Div containing title + projects. */
 .projectContainer {
+	display: flex;
+	flex-direction: column;
+	min-height: 150vh;
+	width: 100%;
+	padding-bottom: 10vh;
+	background-color: transparent;
+}
+
+/* Div containing the projects */
+.projects {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	justify-content: space-around;
-	min-height: 150vh;
-	margin-top: 8vh;
-	padding-bottom: 10vh;
+	justify-content: space-between;
+	width: 100%;
+	height: 100%;
+	padding-top: 5vh;
+}
+
+.projectTitle {
+	height: 5vh;
+	color: black;
+	font-family: 'Titillium Web', sans-serif;
 }
 
 /* Title below navbar. */
 .pageTitle {
-	width: 85%;
+	width: 100%;
 	text-align: center;
-	color: rgb(188, 188, 188);
+	color: black;
 	font-family: 'Titillium Web', sans-serif;
-	text-shadow: 2px 2px 3px rgb(45, 45, 45);
-	animation-duration: 3s;
-	animation-name: float;
-	animation-iteration-count: infinite;
-	animation-timing-function: ease-in-out;
-	animation-direction: alternate;
+	/*text-shadow: 2px 2px 3px rgb(45, 45, 45);*/
 }
 
 /* Project div (contains the pic and description). */
 .project {
 	display: flex;
 	flex-direction: column;
-	margin-top: 5vh;
+	margin-top: 3vh;
 	margin-right: 3vh;
 	margin-left: 3vh;
-	width: 50vh;
+	width: 23%;
 	height: 60vh;
-	box-shadow: -2px 2px 8px black, 2px 2px 6px rgb(45, 45, 45);
+	/*box-shadow: -2px 2px 8px black, 2px 2px 6px rgb(45, 45, 45);*/
 }
 
-@media (max-width: 1151px) {
+@media (max-width: 880px) {
 	.project {
-		width: 45vh;
-		height: 55vh;
+		width: 35vh;
+		min-height: 55vh;
 	}
 }
 
-@media (max-width: 773px) {
-	.project {
-		width: 40vh;
-		height: 50vh;
+@media (max-width: 793px) {
+	.projects {
+		justify-content: space-around;
 	}
 }
 
 @media (max-width: 637px) {
 	.projectContainer {
 		flex-wrap: wrap;
+	}
+
+	.projects {
 		justify-content: center;
 	}
 
 	.project { 
-		width: 60%;
+		width: 55%;
 		height: 65vh;
-		margin-right: 0;
 	}
 }
+
 
 .projectPic {
 	height: 50%;
 	width: 100%;
-	background-color: rgb(188, 188, 188);
+	background-color: black;
 }
 
 .projectDesc {
 	text-align: center;
 	height: 50%;
 	width: 100%;
-	background-color: rgb(40, 40, 40);
+	background-color: transparent;
+	border-style: solid;
+	border-width: thin;
+	border-top: none;
+	border-color: black;
 }
 
 .description {
-	color: rgb(188, 188, 188);
+	font-size: 12pt;
+	color: black;
 	font-family: 'Titillium Web', sans-serif;
+}
+
+@media (max-width: 330px) {
+	.description {
+		font-size: 10pt;
+	}
 }
