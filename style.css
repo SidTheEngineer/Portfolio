@@ -106,67 +106,75 @@ a:active {text-decoration: none;}
 	flex-direction: column;
 	justify-content: center;
 	width: 100%;
-	height: 100%;
+	min-height: 100%;
 	padding-top: 8vh;
-}
-
-@keyframes flyInFromLeft {
-	from {
-		right: 250vh;
-	}
-	to {
-		right: 0;
-	}
 }
 
 .aboutMe {
 	position: absolute;
-	margin-top: 20vh;
+	right: 13vw;
+	margin-top: 15vh;
 	top: 5vh;
-	right: 0;
 	bottom: 15vh;
-	height: 30%;
+	min-height: 30%;
 	width: 75%;
-	animation-name: flyInFromLeft;
-	animation-duration: .5s;
-	animation-timing-function: ease-out;
+}
+
+@media (max-width: 600px) {
+	.aboutText {
+		font-size: 1em;
+		width: 100%;
+	}
+}
+
+
+@keyframes fontAnimation {
+	from {
+		font-size: 0pt;
+	}
+	to {
+		font-size: 12pt;
+	}
 }
 
 .hello {
+	font-size: 36pt;
 	color: blue;
 	font-family: 'Titillium Web', sans-serif;
-
 }
 
 .welcome {
+	font-size: 12pt;
 	color: black;
+	width: 75%;
 	font-family: 'Titillium Web', sans-serif;
-
+	animation-name: fontAnimation;
+	animation-duration: .7s;
 }
 
 .underWelcome {
 	display: flex;
 	justify-content: center;
 	margin-top: 30vh;
-	height: 50vh;
+	min-height: 50vh;
 	width: 100%;
 }
 
 .aboutText {
-	width: 50%;
-	margin-top: 10vh;
+	right: 25vw;
+	width: 75%;
+	margin-top: 5vh;
+	line-height: 2em;
+	font-size: 12pt;
 	font-family: 'Titillium Web', sans-serif;
-	animation-name: fadeIn;
-	animation-delay: 1s;
-	animation-duration: 1s;
+	animation-name: fontAnimation;
+	animation-duration: .7s;
+
 }
 
-@keyframes fadeIn {
-	from {
-		opacity: 0;
-	}
-	to {
-		opacity: 1;
+@media (max-width: 350px) {
+	.aboutText {
+		font-size: .9em;
 	}
 }
 
@@ -174,6 +182,7 @@ a:active {text-decoration: none;}
 .projectContainer {
 	display: flex;
 	flex-direction: column;
+	margin: 0;
 	min-height: 150vh;
 	width: 100%;
 	padding-bottom: 10vh;
@@ -225,7 +234,7 @@ a:active {text-decoration: none;}
 
 @media (max-width: 880px) {
 	.project {
-		width: 35vh;
+		width: 35vw;
 		min-height: 55vh;
 	}
 }
@@ -246,7 +255,7 @@ a:active {text-decoration: none;}
 	}
 
 	.project {
-		width: 55%;
+		width: 55vw;
 		height: 65vh;
 	}
 }
@@ -275,4 +284,28 @@ a:active {text-decoration: none;}
 	.description {
 		font-size: 10pt;
 	}
+}
+
+.contactContainer {
+	min-height: 50vh;
+	width: 100%;
+	background-color: rgb(0, 30, 79);
+}
+
+.contactTextContainer {
+	display: flex;
+	justify-content: center;
+	height: 8vh;
+}
+
+ .contactInfoContainer {
+ 	display: flex;
+ 	flex-direction: column;
+ 	padding-top: 8vh;
+ }
+
+.contactText, .contactInfo {
+	text-align: center;
+	color: rgb(175, 175, 175);
+	font-family: 'Titillium Web', sans-serif;
 }

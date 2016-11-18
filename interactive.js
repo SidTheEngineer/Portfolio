@@ -1,7 +1,14 @@
 window.onload = function(event) {
 
-	var projectList = document.getElementsByClassName("project");
+	var contact = document.getElementById("contact");
 
-	console.log(projectList);
+	contact.addEventListener("click", scrollToContact);
 
+}
+
+function scrollToContact(event) {
+	var contactContainer = document.getElementById("contactInfoContainer");
+	contactContainer.scrollIntoView({
+		behavior: "smooth"
+	});
 }
