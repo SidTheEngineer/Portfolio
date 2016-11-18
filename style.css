@@ -27,7 +27,7 @@ a:active {text-decoration: none;}
 	/*background-color: rgb(40, 40, 40);*/
 	background-color: transparent;
 	padding: 0;
-	margin: 0;
+	margin-top: 3vh;
 	/*box-shadow: 0px 6px 3px -3px black;*/
 	z-index: 3;
 }
@@ -52,9 +52,13 @@ a:active {text-decoration: none;}
 	margin-right: 10px;
 }
 
-.navItem:active {border-color: blue; border-width: thin; border-style: solid;}
-.navItem:hover {border-color: blue; border-width: thin; border-style: solid;}
-.navItem:focus {border-color: blue; border-width: thin; border-style: solid; outline: none;}
+.navItem:active, .navItem:hover, .navItem:focus {
+		border-color: blue; 
+		border-width: thin; 
+		border-style: solid;
+		outline: none;
+		border-radius: 5px;
+	}
 
 /* Text in each item on the right side of navbar */
 .navItem h3 {
@@ -99,30 +103,33 @@ a:active {text-decoration: none;}
 
 .topBlockContainer {
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	width: 100%;
 	height: 100%;
 	padding-top: 8vh;
 }
 
-.aboutMe {
-	position: absolute;
-	bottom: 15vh;
-	right: 0;
-	height: 60%;
-	width: 75%;
-	animation-name: flyIn;
-	animation-duration: 1.5s;
-	animation-timing-function: ease-out;
-}
-
-@keyframes flyIn {
+@keyframes flyInFromLeft {
 	from {
-		right: 400vh;
+		right: 250vh;
 	}
 	to {
 		right: 0;
 	}
+}
+
+.aboutMe {
+	position: absolute;
+	margin-top: 20vh;
+	top: 5vh;
+	right: 0;
+	bottom: 15vh;
+	height: 30%;
+	width: 75%;
+	animation-name: flyInFromLeft;
+	animation-duration: .5s;
+	animation-timing-function: ease-out;
 }
 
 .hello {
@@ -138,7 +145,20 @@ a:active {text-decoration: none;}
 }
 
 .underWelcome {
+	display: flex;
+	justify-content: center;
+	margin-top: 30vh;
+	height: 50vh;
+	width: 100%;
+}
 
+.aboutText {
+	width: 50%;
+	margin-top: 10vh;
+	font-family: 'Titillium Web', sans-serif;
+	animation-name: fadeIn;
+	animation-delay: 1s;
+	animation-duration: 1s;
 }
 
 @keyframes fadeIn {
