@@ -78,7 +78,7 @@ a:active {text-decoration: none;}
 	font-family: 'Titillium Web', sans-serif;
 }
 
-@media (max-width: 736px) {
+@media (max-width: 786px) {
 	.navItem h3 {
 		font-size: 1em;
 	}
@@ -128,10 +128,10 @@ a:active {text-decoration: none;}
 
 @keyframes fontAnimation {
 	from {
-		font-size: 0pt;
+		opacity: 0;
 	}
 	to {
-		font-size: 12pt;
+		opacity: 1;
 	}
 }
 
@@ -148,7 +148,7 @@ a:active {text-decoration: none;}
 	width: 75%;
 	font-family: 'Titillium Web', sans-serif;
 	animation-name: fontAnimation;
-	animation-duration: .7s;
+	animation-duration: 3s;
 }
 
 /* Container that holds the aboutText */
@@ -167,8 +167,43 @@ a:active {text-decoration: none;}
 	font-size: 12pt;
 	font-family: 'Titillium Web', sans-serif;
 	animation-name: fontAnimation;
-	animation-duration: .7s;
+	animation-duration: 3s;
 
+}
+
+
+
+/* =================================== SKILLS BLOCK ================================== */
+
+.skillsContainer {
+	float: left;
+	height: 85%;
+	width: 100%;
+	background-color: rgb(245, 245, 245);
+}
+
+.skillsTitle {
+	width: 100%;
+	text-align: center;
+	color: black;
+	font-family: 'Titillium Web', sans-serif;
+}
+
+.iconContainer {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	flex-wrap: wrap;
+	height: 100%;
+	width: 100%;
+	margin-top: 10vh;
+	padding-bottom: 10vh;
+}
+
+i {
+	font-size: 48pt;
+	text-align: center;
+	width: 15%;
 }
 
 @media (max-width: 350px) {
@@ -178,6 +213,10 @@ a:active {text-decoration: none;}
 
 	.description {
 		font-size: 10pt;
+	}
+
+	.skillsContainer {
+		height: 90vh;
 	}
 }
 
@@ -191,7 +230,7 @@ a:active {text-decoration: none;}
 	min-height: 150vh;
 	width: 100%;
 	padding-bottom: 10vh;
-	background-color: rgb(245, 245, 245);
+	background-color: white;
 }
 
 /* Div containing the projects */
@@ -262,6 +301,15 @@ a:active {text-decoration: none;}
 	.project {
 		width: 55vw;
 		height: 65vh;
+	}
+
+	.icon {
+		height: 75%;
+	}
+
+	i {
+		font-size: 30pt;
+		width: 25%;
 	}
 }
 
