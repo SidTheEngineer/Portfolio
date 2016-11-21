@@ -7,8 +7,6 @@ body {
 	height: 100%;
 	float: left;
 	background-color: rgb(250, 250, 250);
-	/*background-image: url("./images/background.jpg");
-	background-attachment: fixed;*/
 }
 
 /* Remove default link decorations. */
@@ -17,14 +15,13 @@ a:visited {text-decoration: none;}
 a:hover {text-decoration: none;}
 a:active {text-decoration: none;}
 
-/* Navbar */
+/* =================================== NAVBAR ================================== */
 .navContainer {
 	position: absolute;
 	display: flex;
 	flex-direction: row;
 	height: 8vh;
 	width: 100%;
-	/*background-color: rgb(40, 40, 40);*/
 	background-color: transparent;
 	padding: 0;
 	margin-top: 3vh;
@@ -50,6 +47,7 @@ a:active {text-decoration: none;}
 	width: 15%;
 	justify-content: center;
 	margin-right: 10px;
+	border-radius: 5px;
 }
 
 .navItem:active, .navItem:hover, .navItem:focus {
@@ -57,7 +55,6 @@ a:active {text-decoration: none;}
 		border-width: thin; 
 		border-style: solid;
 		outline: none;
-		border-radius: 5px;
 	}
 
 /* Text in each item on the right side of navbar */
@@ -101,6 +98,7 @@ a:active {text-decoration: none;}
 	}
 }
 
+/* =================================== WELCOME BLOCK ================================== */
 .topBlockContainer {
 	display: flex;
 	flex-direction: column;
@@ -137,6 +135,7 @@ a:active {text-decoration: none;}
 	}
 }
 
+/* Hello text. */
 .hello {
 	font-size: 36pt;
 	color: blue;
@@ -152,6 +151,7 @@ a:active {text-decoration: none;}
 	animation-duration: .7s;
 }
 
+/* Container that holds the aboutText */
 .underWelcome {
 	display: flex;
 	justify-content: center;
@@ -161,7 +161,6 @@ a:active {text-decoration: none;}
 }
 
 .aboutText {
-	right: 25vw;
 	width: 75%;
 	margin-top: 5vh;
 	line-height: 2em;
@@ -176,7 +175,13 @@ a:active {text-decoration: none;}
 	.aboutText {
 		font-size: .9em;
 	}
+
+	.description {
+		font-size: 10pt;
+	}
 }
+
+/* =================================== PROJECTS BLOCK ================================== */
 
 /* Div containing title + projects. */
 .projectContainer {
@@ -280,11 +285,7 @@ a:active {text-decoration: none;}
 	font-family: 'Titillium Web', sans-serif;
 }
 
-@media (max-width: 330px) {
-	.description {
-		font-size: 10pt;
-	}
-}
+/* =================================== CONTACT BLOCK ================================== */
 
 .contactContainer {
 	min-height: 50vh;
