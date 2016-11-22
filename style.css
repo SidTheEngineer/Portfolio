@@ -137,18 +137,20 @@ a:active {text-decoration: none;}
 
 /* Hello text. */
 .hello {
+	padding-left: 10px;
 	font-size: 36pt;
-	color: blue;
+	color: rgb(0, 30, 79);
 	font-family: 'Titillium Web', sans-serif;
 }
 
 .welcome {
-	font-size: 12pt;
+	font-size: 16pt;
+	padding-left: 10px;
 	color: black;
 	width: 75%;
 	font-family: 'Titillium Web', sans-serif;
 	animation-name: fontAnimation;
-	animation-duration: 3s;
+	animation-duration: 1.5s;
 }
 
 /* Container that holds the aboutText */
@@ -164,10 +166,10 @@ a:active {text-decoration: none;}
 	width: 75%;
 	margin-top: 5vh;
 	line-height: 2em;
-	font-size: 12pt;
+	font-size: 16pt;
 	font-family: 'Titillium Web', sans-serif;
 	animation-name: fontAnimation;
-	animation-duration: 3s;
+	animation-duration: 1.5s;
 
 }
 
@@ -183,6 +185,7 @@ a:active {text-decoration: none;}
 }
 
 .skillsTitle {
+	font-size: 24pt;
 	width: 100%;
 	text-align: center;
 	color: black;
@@ -197,11 +200,11 @@ a:active {text-decoration: none;}
 	height: 100%;
 	width: 100%;
 	margin-top: 10vh;
-	padding-bottom: 10vh;
+	padding-bottom: 5vh;
 }
 
 i {
-	font-size: 48pt;
+	font-size: 24pt;
 	text-align: center;
 	width: 15%;
 }
@@ -222,115 +225,49 @@ i {
 
 /* =================================== PROJECTS BLOCK ================================== */
 
-/* Div containing title + projects. */
-.projectContainer {
-	display: flex;
-	flex-direction: column;
-	margin: 0;
-	min-height: 150vh;
-	width: 100%;
-	padding-bottom: 10vh;
-	background-color: white;
-}
-
-/* Div containing the projects */
-.projects {
+#projectContainer {
 	display: flex;
 	flex-direction: row;
+	justify-content: center;
 	flex-wrap: wrap;
-	justify-content: space-between;
+	clear: both;
+	min-height: 75vh;
 	width: 100%;
-	height: 100%;
-	padding-top: 5vh;
 }
 
-.projectTitle {
-	height: 5vh;
-	color: black;
+.project-title {
 	font-family: 'Titillium Web', sans-serif;
-}
-
-/* Title below navbar. */
-.pageTitle {
-	width: 100%;
+	color: black;
 	text-align: center;
-	padding-top: 5vh;
-	padding-bottom: 2vh;
-	color: black;
-	font-family: 'Titillium Web', sans-serif;
-	/*text-shadow: 2px 2px 3px rgb(45, 45, 45);*/
+	width: 100%;
 }
 
-/* Project div (contains the pic and description). */
 .project {
-	display: flex;
-	flex-direction: column;
-	margin-top: 3vh;
-	margin-right: 3vh;
-	margin-left: 3vh;
-	width: 23%;
-	height: 60vh;
-	/*box-shadow: -2px 2px 8px rgb(200, 200, 200), 2px 2px 6px rgb(200, 200, 200);*/
-	border-style: solid;
-	border-width: thin;
-	border-color: rgb(200,200,200);
+	height: 60%;
+	width: 100%;
+	margin: 0 auto;
+	border: thin solid lightgray;
+	margin-top: 2vh;
+	margin-bottom: 2vh;
 }
 
-@media (max-width: 880px) {
+.project-pic {
+	height: 100%;
+	width: 100%;
+}
+
+.project-description {
+	opacity: .4;
+}
+
+@media (min-width: 500px) {
 	.project {
-		width: 35vw;
-		min-height: 55vh;
-	}
-}
-
-@media (max-width: 793px) {
-	.projects {
-		justify-content: space-around;
-	}
-}
-
-@media (max-width: 637px) {
-	.projectContainer {
-		flex-wrap: wrap;
-	}
-
-	.projects {
-		justify-content: center;
-	}
-
-	.project {
-		width: 55vw;
-		height: 65vh;
-	}
-
-	.icon {
-		height: 75%;
+		width: 35vh;
 	}
 
 	i {
-		font-size: 30pt;
-		width: 25%;
+		font-size: 48pt;
 	}
-}
-
-
-.projectPic {
-	height: 50%;
-	width: 100%;
-	background-color: black;
-}
-
-.projectDesc {
-	text-align: center;
-	height: 50%;
-	width: 100%;
-	background-color: white;
-}
-
-.description {
-	font-size: 12pt;
-	color: black;
-	font-family: 'Titillium Web', sans-serif;
 }
 
 /* =================================== CONTACT BLOCK ================================== */
