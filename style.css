@@ -50,8 +50,8 @@ a:active {text-decoration: none;}
 	border-radius: 5px;
 }
 
-.nav-item:active, .nav-item:hover, .nav-item:focus {
-		border-color: blue; 
+.nav-item:active, .nav-item:hover {
+		border-color: rgb(200,200,200); 
 		border-width: thin; 
 		border-style: solid;
 		outline: none;
@@ -158,11 +158,17 @@ a:active {text-decoration: none;}
 	width: 75%;
 	margin-top: 5vh;
 	line-height: 2em;
-	font-size: 12pt;
+	font-size: 10pt;
 	font-family: 'Titillium Web', sans-serif;
 	animation-name: fontAnimation;
 	animation-duration: 1.5s;
 
+}
+
+@media(min-width: 400px) {
+	.about-text {
+		font-size: 12pt; 
+	}
 }
 
 @media (min-width: 786px) {
@@ -193,7 +199,7 @@ a:active {text-decoration: none;}
 	float: left;
 	height: 50%;
 	width: 100%;
-	background-color: rgb(245, 245, 245);
+	background-color: rgb(240, 240, 240);
 }
 
 .skills-title {
@@ -202,6 +208,7 @@ a:active {text-decoration: none;}
 	text-align: center;
 	color: black;
 	font-family: 'Titillium Web', sans-serif;
+	text-shadow: 6px 6px 10px rgb(195,195,195);
 }
 
 .icon-container {
@@ -235,10 +242,11 @@ i {
 }
 
 .project-title {
-	font-family: 'Titillium Web', sans-serif;
-	color: black;
 	text-align: center;
 	width: 100%;
+	font-family: 'Titillium Web', sans-serif;
+	font-size: 24pt;
+	text-shadow: 6px 6px 10px rgb(210,210,210);
 }
 
 .project {
@@ -276,12 +284,20 @@ i {
 	}
 }
 
+@media (min-width: 786px) {
+	.project-title, .skills-title, .contact-text {
+		font-size: 48pt;
+	}
+
+	.contact-info {font-size: 16pt;}
+}
+
 /* =================================== CONTACT BLOCK ================================== */
 
 .contact-container {
 	min-height: 50vh;
 	width: 100%;
-	background-color: rgb(0, 30, 79);
+	background-color: rgb(240, 240, 240);
 }
 
 .contact-text-container {
@@ -296,8 +312,10 @@ i {
  	padding-top: 8vh;
  }
 
+.contact-text {text-shadow: 6px 6px 10px rgb(195,195,195);}
+
 .contact-text, .contact-info {
 	text-align: center;
-	color: rgb(175, 175, 175);
+	color: black;
 	font-family: 'Titillium Web', sans-serif;
 }
