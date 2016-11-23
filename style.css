@@ -1,4 +1,4 @@
-html, body {
+ html, body {
 	height: 100%;
 	width: 100%;
 }
@@ -20,7 +20,7 @@ a:active {text-decoration: none;}
 	position: absolute;
 	display: flex;
 	flex-direction: row;
-	height: 8vh;
+	height: 6vh;
 	width: 100%;
 	background-color: transparent;
 	padding: 0;
@@ -34,7 +34,7 @@ a:active {text-decoration: none;}
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-end;
-	height: 8vh;
+	height: 6vh;
 	width: 75%;
 	padding: 0;
 	margin: 0;
@@ -43,7 +43,7 @@ a:active {text-decoration: none;}
 /* Single item in the right side of navbar (resume, github ...) */
 .navItem {
 	display: flex;
-	height: 8vh;
+	height: 6vh;
 	width: 15%;
 	justify-content: center;
 	margin-right: 10px;
@@ -99,7 +99,7 @@ a:active {text-decoration: none;}
 }
 
 /* =================================== WELCOME BLOCK ================================== */
-.topBlockContainer {
+.top-block-container {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -118,14 +118,6 @@ a:active {text-decoration: none;}
 	width: 75%;
 }
 
-@media (max-width: 600px) {
-	.aboutText {
-		font-size: 1em;
-		width: 100%;
-	}
-}
-
-
 @keyframes fontAnimation {
 	from {
 		opacity: 0;
@@ -139,7 +131,7 @@ a:active {text-decoration: none;}
 .hello {
 	padding-left: 10px;
 	font-size: 36pt;
-	color: rgb(0, 30, 79);
+	color: black
 	font-family: 'Titillium Web', sans-serif;
 }
 
@@ -166,11 +158,31 @@ a:active {text-decoration: none;}
 	width: 75%;
 	margin-top: 5vh;
 	line-height: 2em;
-	font-size: 16pt;
+	font-size: 12pt;
 	font-family: 'Titillium Web', sans-serif;
 	animation-name: fontAnimation;
 	animation-duration: 1.5s;
 
+}
+
+@media (min-width: 786px) {
+	.aboutText {
+		font-size: 16pt;
+	}
+}
+
+@media (min-width: 1224px) {
+	.hello {
+		font-size: 38pt;
+	}
+
+	.welcome {
+		font-size: 18pt;
+	}
+
+	.aboutText {
+		font-size: 18pt;
+	}
 }
 
 
@@ -179,7 +191,7 @@ a:active {text-decoration: none;}
 
 .skillsContainer {
 	float: left;
-	height: 85%;
+	height: 50%;
 	width: 100%;
 	background-color: rgb(245, 245, 245);
 }
@@ -195,9 +207,9 @@ a:active {text-decoration: none;}
 .iconContainer {
 	display: flex;
 	flex-direction: row;
-	justify-content: center;
+	justify-content: space-between;
 	flex-wrap: wrap;
-	height: 100%;
+	height: 75%;
 	width: 100%;
 	margin-top: 10vh;
 	padding-bottom: 5vh;
@@ -207,20 +219,7 @@ i {
 	font-size: 24pt;
 	text-align: center;
 	width: 15%;
-}
-
-@media (max-width: 350px) {
-	.aboutText {
-		font-size: .9em;
-	}
-
-	.description {
-		font-size: 10pt;
-	}
-
-	.skillsContainer {
-		height: 90vh;
-	}
+	height: 15%;
 }
 
 /* =================================== PROJECTS BLOCK ================================== */
@@ -243,10 +242,10 @@ i {
 }
 
 .project {
-	height: 60%;
+	height: 40vh;
 	width: 100%;
 	margin: 0 auto;
-	border: thin solid lightgray;
+	/*border: thin solid lightgray;*/
 	margin-top: 2vh;
 	margin-bottom: 2vh;
 }
@@ -254,6 +253,13 @@ i {
 .project-pic {
 	height: 100%;
 	width: 100%;
+}
+
+.project-pic:hover {
+	opacity: .5;
+}
+.project-pic:active {
+	opacity: .5;
 }
 
 .project-description {
