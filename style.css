@@ -196,8 +196,10 @@ a:active {text-decoration: none;}
 /* =================================== SKILLS BLOCK ================================== */
 
 .skills-container {
+	display: flex;
+	flex-direction: column;
 	float: left;
-	height: 50%;
+	height: 50em;
 	width: 100%;
 	background-color: rgb(240, 240, 240);
 }
@@ -228,6 +230,12 @@ i {
 	width: 15%;
 	height: 15%;
 }
+
+/*@media (min-height: 768px) {
+	i {
+		font-size: 24pt;
+	}
+}*/
 
 /* =================================== PROJECTS BLOCK ================================== */
 
@@ -274,13 +282,20 @@ i {
 	opacity: .4;
 }
 
-@media (min-width: 500px) {
-	.project {
-		width: 35vh;
+@media (max-width: 500px) {
+	.skills-container {
+		height: 30em;
 	}
+}
+
+@media (min-width: 500px) {
 
 	i {
 		font-size: 48pt;
+	}
+
+	.project {
+		width: 35vh;
 	}
 }
 
