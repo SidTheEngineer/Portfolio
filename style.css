@@ -51,8 +51,8 @@ a:active {text-decoration: none;}
 }
 
 .nav-item:active, .nav-item:hover {
-		border-color: rgb(200,200,200); 
-		border-width: thin; 
+		border-color: rgb(200,200,200);
+		border-width: thin;
 		border-style: solid;
 		outline: none;
 	}
@@ -169,7 +169,7 @@ a:active {text-decoration: none;}
 
 @media(min-width: 400px) {
 	.about-text {
-		font-size: 12pt; 
+		font-size: 12pt;
 	}
 }
 
@@ -201,11 +201,7 @@ a:active {text-decoration: none;}
 	display: flex;
 	flex-direction: column;
 	float: left;
-<<<<<<< HEAD
-	height: 65%;
-=======
 	height: 50em;
->>>>>>> 42dd4e1fb6a95997d8b71e415681d76c1de13534
 	width: 100%;
 	background-color: rgb(235, 235, 235);
 }
@@ -262,9 +258,13 @@ i {
 	height: 40vh;
 	width: 100%;
 	margin: 0 auto;
-	/*border: thin solid lightgray;*/
+	border: thin solid transparent;
+    border-radius: 5px;
 	margin-top: 2vh;
 	margin-bottom: 2vh;
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.6),
+        0 11px 35px 4px rgba(0,0,0,0.56),
+         0 0 0 1px rgba(0, 0, 0, 0.3);
 }
 
 .project-pic {
