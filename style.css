@@ -106,7 +106,7 @@ a:active {text-decoration: none;}
 	width: 100%;
 	min-height: 100%;
 	padding-top: 8vh;
-	background-color: rgb(240,240,240);
+	background-color: rgb(245,245,245);
 }
 
 .about-me {
@@ -142,6 +142,7 @@ a:active {text-decoration: none;}
 	color: black;
 	width: 75%;
 	font-family: 'Titillium Web', sans-serif;
+	font-weight: 300;
 	animation-name: fontAnimation;
 	animation-duration: 1.5s;
 }
@@ -161,6 +162,7 @@ a:active {text-decoration: none;}
 	line-height: 2em;
 	font-size: 10pt;
 	font-family: 'Titillium Web', sans-serif;
+	font-weight: 300;
 	animation-name: fontAnimation;
 	animation-duration: 1.5s;
 }
@@ -241,7 +243,7 @@ i {
 	clear: both;
 	min-height: 75vh;
 	width: 100%;
-	background-color: rgb(240,240,240);
+	background-color: rgb(245,245,245);
 }
 
 .project-title {
