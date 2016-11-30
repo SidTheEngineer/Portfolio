@@ -106,6 +106,7 @@ a:active {text-decoration: none;}
 	width: 100%;
 	min-height: 100%;
 	padding-top: 8vh;
+	background-color: rgb(245,245,245);
 }
 
 .about-me {
@@ -141,6 +142,7 @@ a:active {text-decoration: none;}
 	color: black;
 	width: 75%;
 	font-family: 'Titillium Web', sans-serif;
+	font-weight: 300;
 	animation-name: fontAnimation;
 	animation-duration: 1.5s;
 }
@@ -160,9 +162,9 @@ a:active {text-decoration: none;}
 	line-height: 2em;
 	font-size: 10pt;
 	font-family: 'Titillium Web', sans-serif;
+	font-weight: 300;
 	animation-name: fontAnimation;
 	animation-duration: 1.5s;
-
 }
 
 @media(min-width: 400px) {
@@ -196,10 +198,16 @@ a:active {text-decoration: none;}
 /* =================================== SKILLS BLOCK ================================== */
 
 .skills-container {
+	display: flex;
+	flex-direction: column;
 	float: left;
+<<<<<<< HEAD
 	height: 65%;
+=======
+	height: 50em;
+>>>>>>> 42dd4e1fb6a95997d8b71e415681d76c1de13534
 	width: 100%;
-	background-color: rgb(240, 240, 240);
+	background-color: rgb(235, 235, 235);
 }
 
 .skills-title {
@@ -208,7 +216,7 @@ a:active {text-decoration: none;}
 	text-align: center;
 	color: black;
 	font-family: 'Titillium Web', sans-serif;
-	text-shadow: 6px 6px 10px rgb(195,195,195);
+	/*text-shadow: 3px 3px 7px rgb(195,195,195);*/
 }
 
 .icon-container {
@@ -239,6 +247,7 @@ i {
 	clear: both;
 	min-height: 75vh;
 	width: 100%;
+	background-color: rgb(245,245,245);
 }
 
 .project-title {
@@ -246,7 +255,7 @@ i {
 	width: 100%;
 	font-family: 'Titillium Web', sans-serif;
 	font-size: 24pt;
-	text-shadow: 6px 6px 10px rgb(210,210,210);
+	/*text-shadow: 3px 3px 7px rgb(210,210,210);*/
 }
 
 .project {
@@ -274,13 +283,20 @@ i {
 	opacity: .4;
 }
 
-@media (min-width: 500px) {
-	.project {
-		width: 35vh;
+@media (max-width: 500px) {
+	.skills-container {
+		height: 30em;
 	}
+}
+
+@media (min-width: 500px) {
 
 	i {
 		font-size: 48pt;
+	}
+
+	.project {
+		width: 35vh;
 	}
 }
 
@@ -297,7 +313,7 @@ i {
 .contact-container {
 	min-height: 50vh;
 	width: 100%;
-	background-color: rgb(240, 240, 240);
+	background-color: rgb(235, 235, 235);
 }
 
 .contact-text-container {
@@ -306,13 +322,13 @@ i {
 	height: 8vh;
 }
 
- .contact-info-container {
+ #contactInfoContainer {
  	display: flex;
  	flex-direction: column;
  	padding-top: 8vh;
  }
 
-.contact-text {text-shadow: 6px 6px 10px rgb(195,195,195);}
+.contact-text {/*text-shadow: 3px 3px 7px rgb(195,195,195);*/}
 
 .contact-text, .contact-info {
 	text-align: center;
