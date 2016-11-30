@@ -131,7 +131,7 @@ a:active {text-decoration: none;}
 .hello {
 	padding-left: 10px;
 	font-size: 36pt;
-	color: black
+	color: black;
 	font-family: 'Titillium Web', sans-serif;
 }
 
@@ -197,7 +197,7 @@ a:active {text-decoration: none;}
 
 .skills-container {
 	float: left;
-	height: 50%;
+	height: 65%;
 	width: 100%;
 	background-color: rgb(240, 240, 240);
 }
