@@ -135,6 +135,7 @@ a:active {text-decoration: none;}
 	font-size: 36pt;
 	color: white;
 	font-family: 'Titillium Web', sans-serif;
+	text-shadow: 3px 3px 7px rgb(30,30,30);
 }
 
 .welcome {
@@ -146,6 +147,7 @@ a:active {text-decoration: none;}
 	font-weight: 300;
 	animation-name: fontAnimation;
 	animation-duration: 1.5s;
+	text-shadow: 3px 3px 7px rgb(30,30,30);
 }
 
 /* Container that holds the about-text */
@@ -167,6 +169,7 @@ a:active {text-decoration: none;}
 	animation-name: fontAnimation;
 	animation-duration: 1.5s;
 	color: white;
+	text-shadow: 3px 3px 7px rgb(30,30,30);
 }
 
 @media(min-width: 400px) {
@@ -205,7 +208,8 @@ a:active {text-decoration: none;}
 	float: left;
 	height: 50em;
 	width: 100%;
-	background-color: rgb(235, 235, 235);
+	background-color: rgb(240, 240, 240);
+    box-shadow: 0px 10px 12px rgb(30,30,30), 0px -10px 12px rgb(30,30,30);
 }
 
 .skills-title {
@@ -323,7 +327,8 @@ i {
 .contact-container {
 	min-height: 50vh;
 	width: 100%;
-	background-color: rgb(235, 235, 235);
+	background-color: rgb(240, 240, 240);
+	box-shadow: 0px -10px 12px rgb(30,30,30);
 }
 
 .contact-text-container {
@@ -338,7 +343,7 @@ i {
  	padding-top: 8vh;
  }
 
-.contact-text {/*text-shadow: 3px 3px 7px rgb(195,195,195);*/}
+.contact-info {font-size: 16pt;}
 
 .contact-text, .contact-info {
 	text-align: center;
