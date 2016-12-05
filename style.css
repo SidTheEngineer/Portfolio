@@ -49,6 +49,9 @@ a:active {text-decoration: none;}
 	justify-content: center;
 	margin-right: 10px;
 	border-radius: 5px;
+	border-color: transparent;
+	border-width: thin;
+	border-style: solid;
 }
 
 .nav-item:active, .nav-item:hover {
