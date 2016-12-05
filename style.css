@@ -51,11 +51,11 @@ a:active {text-decoration: none;}
 }
 
 .nav-item:active, .nav-item:hover {
-		border-color: rgb(200,200,200);
-		border-width: thin;
-		border-style: solid;
-		outline: none;
-	}
+	border-color: rgb(200,200,200);
+	border-width: thin;
+	border-style: solid;
+	outline: none;
+}
 
 /* Text in each item on the right side of navbar */
 .nav-item h3 {
@@ -103,6 +103,7 @@ a:active {text-decoration: none;}
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	flex-grow: 1;
 	width: 100%;
 	min-height: 100%;
 	padding-top: 8vh;
@@ -111,13 +112,12 @@ a:active {text-decoration: none;}
 }
 
 .about-me {
-	position: absolute;
-	right: 13vw;
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
 	margin-top: 15vh;
-	top: 5vh;
-	bottom: 15vh;
-	min-height: 30%;
-	width: 75%;
+	margin-left: 18vw;
+	height: 100px;
 }
 
 @keyframes fontAnimation {
@@ -131,7 +131,6 @@ a:active {text-decoration: none;}
 
 /* Hello text. */
 .hello {
-	padding-left: 10px;
 	font-size: 36pt;
 	color: white;
 	font-family: 'Titillium Web', sans-serif;
@@ -139,8 +138,7 @@ a:active {text-decoration: none;}
 }
 
 .welcome {
-	font-size: 16pt;
-	padding-left: 10px;
+	font-size: 16pt;	
 	color: white;
 	width: 75%;
 	font-family: 'Titillium Web', sans-serif;
@@ -153,15 +151,14 @@ a:active {text-decoration: none;}
 /* Container that holds the about-text */
 .under-welcome {
 	display: flex;
-	justify-content: center;
-	margin-top: 30vh;
-	min-height: 50vh;
-	width: 100%;
+	flex-direction: column;
+	flex-grow: 1;
+	margin-left: 18vw;
+	margin-bottom: 50px;
 }
 
 .about-text {
-	width: 75%;
-	margin-top: 5vh;
+	width: 65vw;
 	line-height: 2em;
 	font-size: 10pt;
 	font-family: 'Titillium Web', sans-serif;
@@ -172,13 +169,28 @@ a:active {text-decoration: none;}
 	text-shadow: 3px 3px 7px rgb(30,30,30);
 }
 
-@media(min-width: 400px) {
+@media (min-width: 400px) {
 	.about-text {
+		font-size: 14pt;
+	}
+}
+
+@media (max-width: 400px) {
+	.hello {
+		font-size: 34pt;
+	}
+
+	.welcome {
 		font-size: 12pt;
 	}
 }
 
 @media (min-width: 786px) {
+
+	.hello {
+		font-size: 40pt;
+	}
+
 	.about-text {
 		font-size: 16pt;
 	}
@@ -186,7 +198,7 @@ a:active {text-decoration: none;}
 
 @media (min-width: 1224px) {
 	.hello {
-		font-size: 38pt;
+		font-size: 48pt;
 	}
 
 	.welcome {
@@ -194,10 +206,9 @@ a:active {text-decoration: none;}
 	}
 
 	.about-text {
-		font-size: 18pt;
+		font-size: 20pt;
 	}
 }
-
 
 
 /* =================================== SKILLS BLOCK ================================== */
@@ -216,7 +227,7 @@ a:active {text-decoration: none;}
 	font-size: 24pt;
 	width: 100%;
 	text-align: center;
-	color: black;
+	color: rgb(50,50,50);
 	font-family: 'Titillium Web', sans-serif;
 	/*text-shadow: 3px 3px 7px rgb(195,195,195);*/
 }
@@ -269,7 +280,7 @@ i {
 
 .project {
 	height: 35vh;
-	width: 100%;
+	width: 70%;
 	margin: 0 auto;
 	border: thin solid transparent;
     border-radius: 5px;
@@ -347,6 +358,12 @@ i {
 
 .contact-text, .contact-info {
 	text-align: center;
-	color: black;
+	color: rgb(50,50,50);
 	font-family: 'Titillium Web', sans-serif;
+}
+
+@media (max-width: 400px) {
+	.contact-info {
+		font-size: 12pt;
+	}
 }
