@@ -137,17 +137,6 @@ a:active {text-decoration: none;}
 	text-shadow: 3px 3px 7px rgb(30,30,30);
 }
 
-.welcome {
-	font-size: 16pt;	
-	color: white;
-	width: 75%;
-	font-family: 'Titillium Web', sans-serif;
-	font-weight: 300;
-	animation-name: fontAnimation;
-	animation-duration: 1.5s;
-	text-shadow: 3px 3px 7px rgb(30,30,30);
-}
-
 /* Container that holds the about-text */
 .under-welcome {
 	display: flex;
