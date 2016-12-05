@@ -1,13 +1,13 @@
  html, body {
 	height: 100%;
 	width: 100%;
+	margin: 0 auto;
 }
 
 body {
 	height: 100%;
 	float: left;
 	background-color: rgb(250, 250, 250);
-	margin: 0 auto;
 }
 
 /* Remove default link decorations. */
