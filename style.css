@@ -107,7 +107,7 @@ a:active {text-decoration: none;}
 	width: 100%;
 	min-height: 100%;
 	padding-top: 8vh;
-	background-image: url("./images/background.jpg");
+	background-image: url("./Images/background.jpg");
 	background-attachment: fixed;
 }
 
@@ -250,7 +250,7 @@ i {
 	min-height: 75vh;
 	width: 100%;
 	/*background-color: rgb(245,245,245);*/
-	background-image: url("./images/background.jpg");
+	background-image: url("./Images/background.jpg");
 	background-attachment: fixed;
 }
 
