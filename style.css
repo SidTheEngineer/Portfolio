@@ -257,13 +257,12 @@ i {
 	background-attachment: fixed;
 }
 
-.github-link {display: flex; justify-content: center; width: 100%;}
-.github-link a {padding-bottom: 3vh;}
+.github-link {display: flex; justify-content: center; width: 100%; padding-bottom: 5vh;}
 
 .project-title {
 	text-align: center;
 	width: 100%;
-	padding-top: 5vh;
+	padding-top: 3vh;
 	font-family: 'Titillium Web', sans-serif;
 	font-size: 24pt;
 	/*text-shadow: 3px 3px 7px rgb(210,210,210);*/
