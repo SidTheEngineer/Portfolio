@@ -14,7 +14,7 @@ html, body {
   justify-content: flex-start;
   align-items: center;
   width: 100%;
-  height: 100%;
+  min-height: 100%;
   background-color: rgb(30, 30, 30);
 }
 
@@ -23,12 +23,13 @@ html, body {
   width: 45%;
 }
 
+.title { margin-top: 50px; }
+
 .logo-row {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 100%;
-  height: 150px;
   margin-top: 75px;
 }
 
@@ -46,6 +47,13 @@ html, body {
 .link { color: cyan; }
 .link:hover { color: lightblue; }
 
+.skills-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
 a {
   text-decoration: none;
   width: 100%;
@@ -53,16 +61,18 @@ a {
 
 h1 {
   font-family: sans-serif;
-  color: rgb(220, 220, 220);
+  color: white;
   width: 100%;
 }
 
-p {
+p, li {
   font-family: sans-serif;
-  color: rgb(220, 220, 220);
+  color: white;
   line-height: 2em;
   width: 100%;
 }
+
+.skills-row h1 { font-size: 12pt; }
 
 @media (max-width: 576px) {
   .welcome { width: 80%; }
@@ -72,6 +82,7 @@ p {
     height: 32px;
   }
   .text-logo { font-size: 12pt; }
+  .skills-row { flex-direction: column; }
 }
 
 @media (max-width: 992px) {
